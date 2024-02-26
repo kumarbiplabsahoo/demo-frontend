@@ -1,25 +1,25 @@
-// src/router/Router.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import { User } from '../pages/user';
-import { Login } from '../pages/login';
-import Registration from '../pages/registration';
-import ForgetPassword from '../pages/forgetPassword';
-
-import Home from '../pages/home';
+// AppRouter.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PrivateRoute from "./privateRoute"; // Make sure to import the correct file path
+import Login from "../pages/auth/login";
+import Signup from "../pages/auth/signup";
+import Home from "../pages/home";
 
 const AppRouter = () => {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" exact element={<Login />} />
-                <Route path="/registration" exact element={<Registration />} />
-                <Route path="/forgetpassword" exact element={<ForgetPassword />} />
+  return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
 
-                <Route path="/home" exact element={<Home />} />
-            </Routes>
-        </Router>
-    );
+        {/* Use PrivateRoute directly as a Route component */}
+        <Route element={<PrivateRoute />}>
+          <Route path="/" element={<Home />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 };
 
 export default AppRouter;

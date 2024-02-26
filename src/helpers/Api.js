@@ -1,11 +1,11 @@
 import axios from "axios";
 // import config from "../config/index";
 
-const laptop = "biplab"
-// const laptop = "papun"
+// const laptop = "server"
+const laptop = "local"
 let Api = null;
 
-if (laptop === "papun") {
+if (laptop === "server") {
     const apiUrl = "http://192.168.29.162:5555/api/"
     Api = axios.create({ baseURL: apiUrl });
 }

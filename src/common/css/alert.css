@@ -7,12 +7,12 @@
     z-index: 1000;
 }
 
-.alert {
+.mainAlert {
     opacity: 1;
     transition: opacity 1s ease-in-out;
     /* Adjust the transition duration as needed */
 }
 
-.alert.exiting {
+.mainAlert.exiting {
     opacity: 0;
-}
+} 

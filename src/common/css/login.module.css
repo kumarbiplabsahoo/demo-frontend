@@ -39,18 +39,16 @@
     text-align: center;
 }
 
-.halfInput .MuiTypography-root {
+.halfInput .textfield{
+    margin-bottom: 2%;
+    width: 18rem;
     margin-bottom: 2%;
 }
 
 .halfInput Link {
     margin-top: 10px;
 }
-
-.halfInput .MuiTextField-root {
-    width: 19rem;
-    margin-bottom: 2%;
-}
+ 
 
 .forgetPass{
     text-decoration: none !important;
@@ -61,12 +59,10 @@
     width: 7rem;
     margin-bottom: 1rem;
     background-color: #2196f3;
-    /* Adjust the color as needed */
     color: #fff;
 
     &:hover {
         background-color: #0d47a1;
-        /* Adjust the hover color as needed */
     }
 }
 

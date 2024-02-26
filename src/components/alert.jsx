@@ -29,7 +29,7 @@ const BasicAlerts = () => {
     return (
         <Stack className={`alertStack ${exiting ? 'exiting' : ''}`} sx={{ width: '20%' }} spacing={2}>
             {apiAlert && (
-                <Alert className='alert' severity={apiAlert.severity}>
+                <Alert className='mainAlert' severity={apiAlert.severity}>
                     {apiAlert.message}
                 </Alert>
             )}
